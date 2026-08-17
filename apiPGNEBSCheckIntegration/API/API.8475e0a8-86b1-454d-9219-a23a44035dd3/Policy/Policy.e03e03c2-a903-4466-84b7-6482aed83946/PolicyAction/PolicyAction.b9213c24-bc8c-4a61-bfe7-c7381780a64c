@@ -1,0 +1,38 @@
+{
+  "id" : "b9213c24-bc8c-4a61-bfe7-c7381780a64c",
+  "names" : [ {
+    "value" : "Response Transformation",
+    "locale" : "en"
+  } ],
+  "templateKey" : "responseTransformation",
+  "parameters" : [ {
+    "templateKey" : "transformationConditions",
+    "parameters" : [ {
+      "templateKey" : "logicalConnector",
+      "values" : [ "AND" ]
+    }, {
+      "templateKey" : "transformationCondition",
+      "parameters" : [ {
+        "templateKey" : "transformationVariable",
+        "values" : [ "${response.payload.jsonPath[$.response.responseCode]}" ]
+      }, {
+        "templateKey" : "transformationConditionOperator",
+        "values" : [ "notEquals" ]
+      }, {
+        "templateKey" : "transformationConditionValue",
+        "values" : [ "00" ]
+      } ]
+    } ]
+  }, {
+    "templateKey" : "responseTransformationConfiguration",
+    "parameters" : [ {
+      "templateKey" : "payloadTransformation",
+      "parameters" : [ {
+        "templateKey" : "payload",
+        "values" : [ "{\r\n    \"statusIntegration\": \"${response.payload.jsonPath[$.response.statusIntegration]}\",\r\n    \"validationStatus\": \"${response.payload.jsonPath[$.response.validationStatus]}\",\r\n    \"amountInvoiceHeader\": \"${response.payload.jsonPath[$.response.amountInvoiceHeader]}\",\r\n    \"amountInvoiceLine\": \"${response.payload.jsonPath[$.response.amountInvoiceLine]}\",\r\n    \"amountPayment\": \"${response.payload.jsonPath[$.response.amountPayment]}\",\r\n    \"errorMessage\": \"${response.payload.jsonPath[$.response.responseMessage]}\"\r\n}" ]
+      } ]
+    } ]
+  } ],
+  "active" : false,
+  "_docType" : "policyactions"
+}

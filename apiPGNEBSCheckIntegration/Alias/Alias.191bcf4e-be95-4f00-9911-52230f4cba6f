@@ -1,0 +1,8 @@
+{
+  "id" : "191bcf4e-be95-4f00-9911-52230f4cba6f",
+  "name" : "basicAuthWMIS",
+  "type" : "simple",
+  "owner" : "apigateway_user",
+  "value" : "Basic bWlpZGV2Om1paWRldkBTZWN1cmU=",
+  "_docType" : "aliases"
+}

@@ -1,0 +1,8 @@
+{
+  "id" : "6448a3d6-3390-451d-b777-ca9c3105e07c",
+  "name" : "PGNEBSCheckIntegration-url",
+  "type" : "simple",
+  "owner" : "Administrator",
+  "value" : "http://10.129.2.213:4444/invoke/PGNEBSCheckIntegration.services:",
+  "_docType" : "aliases"
+}

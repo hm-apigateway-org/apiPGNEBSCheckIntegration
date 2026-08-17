@@ -1,0 +1,146 @@
+{
+  "id" : "1d0d5970-090c-4343-938f-5f72d682a7fc",
+  "names" : [ {
+    "value" : "Response Transformation",
+    "locale" : "en"
+  } ],
+  "templateKey" : "responseTransformation",
+  "parameters" : [ {
+    "templateKey" : "transformationConditions",
+    "parameters" : [ {
+      "templateKey" : "logicalConnector",
+      "values" : [ "OR" ]
+    } ]
+  }, {
+    "templateKey" : "responseTransformationConfiguration",
+    "parameters" : [ {
+      "templateKey" : "restHeaderTransformation",
+      "parameters" : [ {
+        "templateKey" : "addOrModify",
+        "parameters" : [ {
+          "templateKey" : "transformationVariable",
+          "values" : [ "${response.headers.Content-Security-Policy}" ]
+        }, {
+          "templateKey" : "transformationValue",
+          "values" : [ "default-src 'self'" ]
+        } ]
+      }, {
+        "templateKey" : "addOrModify",
+        "parameters" : [ {
+          "templateKey" : "transformationVariable",
+          "values" : [ "${response.headers.X-Content-Type-Options}" ]
+        }, {
+          "templateKey" : "transformationValue",
+          "values" : [ "nosniff" ]
+        } ]
+      }, {
+        "templateKey" : "addOrModify",
+        "parameters" : [ {
+          "templateKey" : "transformationVariable",
+          "values" : [ "${response.headers.X-Frame-Options}" ]
+        }, {
+          "templateKey" : "transformationValue",
+          "values" : [ "SAMEORIGIN" ]
+        } ]
+      }, {
+        "templateKey" : "addOrModify",
+        "parameters" : [ {
+          "templateKey" : "transformationVariable",
+          "values" : [ "${response.headers.Strict-Transport-Security}" ]
+        }, {
+          "templateKey" : "transformationValue",
+          "values" : [ "max-age=31536000; includeSubDomains; preload" ]
+        } ]
+      }, {
+        "templateKey" : "addOrModify",
+        "parameters" : [ {
+          "templateKey" : "transformationVariable",
+          "values" : [ "${response.headers.Referrer-Policy}" ]
+        }, {
+          "templateKey" : "transformationValue",
+          "values" : [ "no-referrer-when-downgrade" ]
+        } ]
+      }, {
+        "templateKey" : "addOrModify",
+        "parameters" : [ {
+          "templateKey" : "transformationVariable",
+          "values" : [ "${response.headers.Permissions-Policy}" ]
+        }, {
+          "templateKey" : "transformationValue",
+          "values" : [ "geolocation=(), microphone=(), camera=()" ]
+        } ]
+      }, {
+        "templateKey" : "addOrModify",
+        "parameters" : [ {
+          "templateKey" : "transformationVariable",
+          "values" : [ "${response.headers.Cross-Origin-Resource-Policy}" ]
+        }, {
+          "templateKey" : "transformationValue",
+          "values" : [ "same-origin" ]
+        } ]
+      }, {
+        "templateKey" : "addOrModify",
+        "parameters" : [ {
+          "templateKey" : "transformationVariable",
+          "values" : [ "${response.headers.Cross-Origin-Opener-Policy}" ]
+        }, {
+          "templateKey" : "transformationValue",
+          "values" : [ "same-origin" ]
+        } ]
+      }, {
+        "templateKey" : "addOrModify",
+        "parameters" : [ {
+          "templateKey" : "transformationVariable",
+          "values" : [ "${response.headers.Cross-Origin-Embedder-Policy}" ]
+        }, {
+          "templateKey" : "transformationValue",
+          "values" : [ "require-corp" ]
+        } ]
+      }, {
+        "templateKey" : "addOrModify",
+        "parameters" : [ {
+          "templateKey" : "transformationVariable",
+          "values" : [ "${response.headers.Cache-Control}" ]
+        }, {
+          "templateKey" : "transformationValue",
+          "values" : [ "no-store" ]
+        } ]
+      }, {
+        "templateKey" : "addOrModify",
+        "parameters" : [ {
+          "templateKey" : "transformationVariable",
+          "values" : [ "${response.headers.Set-Cookie}" ]
+        }, {
+          "templateKey" : "transformationValue",
+          "values" : [ "Secure; HttpOnly; SameSite=Strict" ]
+        } ]
+      }, {
+        "templateKey" : "addOrModify",
+        "parameters" : [ {
+          "templateKey" : "transformationVariable",
+          "values" : [ "${response.headers.rootId}" ]
+        }, {
+          "templateKey" : "transformationValue",
+          "values" : [ "${response.payload.jsonPath[$.response.rootId]}" ]
+        } ]
+      }, {
+        "templateKey" : "addOrModify",
+        "parameters" : [ {
+          "templateKey" : "transformationVariable",
+          "values" : [ "${response.headers.correlationID}" ]
+        }, {
+          "templateKey" : "transformationValue",
+          "values" : [ "${request.correlationID}" ]
+        } ]
+      } ]
+    }, {
+      "templateKey" : "payloadTransformation",
+      "parameters" : [ {
+        "templateKey" : "payload",
+        "values" : [ "" ]
+      } ]
+    } ]
+  } ],
+  "active" : false,
+  "_docType" : "policyactions"
+}

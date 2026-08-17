@@ -1,0 +1,17 @@
+{
+  "id" : "0cb5ebd5-5950-49ed-a8a9-c688c08d7ecc",
+  "names" : [ {
+    "value" : "Straight Through Routing",
+    "locale" : "en"
+  } ],
+  "templateKey" : "straightThroughRouting",
+  "parameters" : [ {
+    "templateKey" : "endpointUri",
+    "values" : [ "${PGNEBSCheckIntegration-url}EBSCheckIntegrationInvoice" ]
+  }, {
+    "templateKey" : "method",
+    "values" : [ "CUSTOM" ]
+  } ],
+  "active" : false,
+  "_docType" : "policyactions"
+}
