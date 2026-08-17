@@ -1,0 +1,79 @@
+{
+  "apiDefinition" : {
+    "info" : {
+      "version" : "1.0",
+      "title" : "apiPGNEBSCheckIntegration"
+    },
+    "basePath" : "",
+    "serviceRegistryDisplayName" : "apiPGNEBSCheckIntegration",
+    "schemes" : [ ],
+    "security" : [ ],
+    "paths" : {
+      "/EBSCheckIntegrationInvoice_RS" : {
+        "post" : {
+          "parameters" : [ ],
+          "responses" : { },
+          "mockedResponses" : { },
+          "mockedConditionsBasedCustomResponsesList" : [ ],
+          "enabled" : true,
+          "scopes" : [ ],
+          "requestBody" : {
+            "content" : { },
+            "name" : "requestBody"
+          }
+        },
+        "parameters" : [ ],
+        "scopes" : [ ],
+        "displayName" : "/EBSCheckIntegrationInvoice_RS",
+        "description" : "/EBSCheckIntegrationInvoice_RS",
+        "enabled" : true
+      }
+    },
+    "securityDefinitions" : { },
+    "definitions" : { },
+    "parameters" : { },
+    "baseUriParameters" : [ ],
+    "externalDocs" : [ ],
+    "servers" : [ {
+      "url" : "${PGNEBSCheckIntegration-url}",
+      "variables" : {
+        "PGNEBSCheckIntegration-url" : { }
+      }
+    } ],
+    "components" : {
+      "schemas" : { },
+      "responses" : { },
+      "parameters" : { },
+      "examples" : { },
+      "requestBodies" : { },
+      "headers" : { },
+      "links" : { },
+      "callbacks" : { }
+    },
+    "type" : "rest"
+  },
+  "nativeEndpoint" : [ {
+    "passSecurityHeaders" : true,
+    "uri" : "${PGNEBSCheckIntegration-url}",
+    "connectionTimeoutDuration" : 0,
+    "alias" : false
+  } ],
+  "apiName" : "apiPGNEBSCheckIntegration",
+  "apiVersion" : "1.0",
+  "maturityState" : "Beta",
+  "isActive" : true,
+  "type" : "REST",
+  "owner" : "Administrator",
+  "policies" : [ "e03e03c2-a903-4466-84b7-6482aed83946" ],
+  "tracingEnabled" : false,
+  "scopes" : [ ],
+  "publishedPortals" : [ ],
+  "creationDate" : "2026-02-04 08:00:32 GMT",
+  "lastModified" : "2026-07-24 08:27:28 GMT",
+  "systemVersion" : 1,
+  "gatewayEndpoints" : {
+    "alias" : "EBSIntegrationChecking"
+  },
+  "id" : "8475e0a8-86b1-454d-9219-a23a44035dd3",
+  "_docType" : "apis"
+}

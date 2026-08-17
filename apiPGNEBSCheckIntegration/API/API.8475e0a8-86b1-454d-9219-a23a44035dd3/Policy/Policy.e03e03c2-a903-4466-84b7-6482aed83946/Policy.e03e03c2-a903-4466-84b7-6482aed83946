@@ -1,0 +1,80 @@
+{
+  "id" : "e03e03c2-a903-4466-84b7-6482aed83946",
+  "names" : [ {
+    "value" : "Default Policy for API apiPGNEBSCheckIntegration",
+    "locale" : "English"
+  } ],
+  "descriptions" : [ {
+    "value" : "",
+    "locale" : "English"
+  } ],
+  "scope" : {
+    "scopeConditions" : [ ]
+  },
+  "policyEnforcements" : [ {
+    "enforcements" : [ {
+      "enforcementObjectId" : "5eac16a3-0fb0-4c01-9b60-e103ed51488b",
+      "order" : "0"
+    } ],
+    "stageKey" : "requestPayloadProcessing"
+  }, {
+    "enforcements" : [ {
+      "enforcementObjectId" : "0cb5ebd5-5950-49ed-a8a9-c688c08d7ecc",
+      "order" : "0"
+    } ],
+    "stageKey" : "routing"
+  }, {
+    "enforcements" : [ {
+      "enforcementObjectId" : "b39b139e-b6ab-4786-b934-47e2510a93bf",
+      "order" : "0"
+    } ],
+    "stageKey" : "LMT"
+  }, {
+    "enforcements" : [ {
+      "enforcementObjectId" : "5170e630-e84b-4980-86ed-d9daff4ce097",
+      "order" : "0"
+    } ],
+    "stageKey" : "IAM"
+  }, {
+    "enforcements" : [ {
+      "enforcementObjectId" : "fd1d79ee-b6f5-433f-9949-fb175822d6d4",
+      "order" : "0"
+    }, {
+      "enforcementObjectId" : "7195eaed-b1ba-4039-8bc1-d6a47b8cc943",
+      "order" : "1"
+    }, {
+      "enforcementObjectId" : "4372eea5-a8b2-489e-881b-6ef648da5c7d",
+      "order" : "2"
+    }, {
+      "enforcementObjectId" : "baed389e-1f20-4157-a417-44d13e911265",
+      "order" : "3"
+    }, {
+      "enforcementObjectId" : "e55761d8-d362-4e12-9640-7d6bb9ae4a9f",
+      "order" : "4"
+    } ],
+    "stageKey" : "responseFaultProcessing"
+  }, {
+    "enforcements" : [ {
+      "enforcementObjectId" : "67f44af5-51e0-4156-a9fe-ace4e593cf08",
+      "order" : "0"
+    } ],
+    "stageKey" : "transport"
+  }, {
+    "enforcements" : [ {
+      "enforcementObjectId" : "1d0d5970-090c-4343-938f-5f72d682a7fc",
+      "order" : "0"
+    }, {
+      "enforcementObjectId" : "b9213c24-bc8c-4a61-bfe7-c7381780a64c",
+      "order" : "1"
+    }, {
+      "enforcementObjectId" : "783df3ae-53ff-4528-b8a5-4aa49720e264",
+      "order" : "2"
+    } ],
+    "stageKey" : "responseProcessing"
+  } ],
+  "policyScope" : "SERVICE",
+  "global" : false,
+  "active" : false,
+  "systemPolicy" : false,
+  "_docType" : "policy"
+}

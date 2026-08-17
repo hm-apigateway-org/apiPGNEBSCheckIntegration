@@ -1,0 +1,59 @@
+{
+  "id" : "5eac16a3-0fb0-4c01-9b60-e103ed51488b",
+  "names" : [ {
+    "value" : "Request Transformation",
+    "locale" : "en"
+  } ],
+  "templateKey" : "requestTransformation",
+  "parameters" : [ {
+    "templateKey" : "transformationConditions",
+    "parameters" : [ {
+      "templateKey" : "logicalConnector",
+      "values" : [ "OR" ]
+    } ]
+  }, {
+    "templateKey" : "requestTransformationConfiguration",
+    "parameters" : [ {
+      "templateKey" : "methodTransformation",
+      "parameters" : [ {
+        "templateKey" : "method",
+        "values" : [ "CUSTOM" ]
+      } ]
+    }, {
+      "templateKey" : "payloadTransformation",
+      "parameters" : [ {
+        "templateKey" : "payload",
+        "values" : [ "" ]
+      } ]
+    }, {
+      "templateKey" : "advancedTransformation",
+      "parameters" : [ {
+        "templateKey" : "invokeISService",
+        "parameters" : [ {
+          "templateKey" : "serviceName",
+          "values" : [ "KOMIAPIMCommonUtils.services:processCorrelationId" ]
+        }, {
+          "templateKey" : "runAsUser",
+          "values" : [ "Administrator" ]
+        }, {
+          "templateKey" : "complyToISSpec",
+          "values" : [ "true" ]
+        } ]
+      } ]
+    }, {
+      "templateKey" : "commonTransformation",
+      "parameters" : [ {
+        "templateKey" : "addOrModify",
+        "parameters" : [ {
+          "templateKey" : "transformationVariable",
+          "values" : [ "${request.headers.Authorization}" ]
+        }, {
+          "templateKey" : "transformationValue",
+          "values" : [ "${basicAuthWMIS}" ]
+        } ]
+      } ]
+    } ]
+  } ],
+  "active" : false,
+  "_docType" : "policyactions"
+}
